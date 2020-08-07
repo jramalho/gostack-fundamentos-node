@@ -1,8 +1,12 @@
 import { Router } from 'express';
-import transactionRouter from './transaction.routes';
+import appointmentRouter from './appointment.routes';
+import usersRouter from './user.routes';
+import sessionsRouter from './sessions.routes';
 
 const routes = Router();
 
-routes.use('/transactions', transactionRouter);
+routes.use('/appointments', appointmentRouter);
+routes.use('/user', usersRouter);
+routes.use('/sessions', sessionsRouter);
 
 export default routes;
